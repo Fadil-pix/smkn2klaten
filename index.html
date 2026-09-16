@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMKN 2 Klaten - Website Resmi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#beranda" class="brand">
+        <img src="Assets/logo.png" alt="Logo SMKN 2 Klaten" class="brand-logo" id="navbarLogo">
+        <span class="brand-text">
+          <strong>SMKN 2 KLATEN</strong>
+          <small>Senden, Ngawen, Klaten</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#beranda" class="nav-link active">Beranda</a>
+        <a href="#profil" class="nav-link">Profil</a>
+        <a href="#sejarah" class="nav-link">Sejarah</a>
+        <a href="#berita" class="nav-link">Berita</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / BERANDA -->
+  <section class="hero" id="beranda">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Selamat Datang<br>di Website Resmi <span class="sparkle" aria-hidden="true">✨</span></h1>
+        <p>SMK Negeri 2 Klaten adalah sekolah yang memiliki komitmen untuk menghasilkan lulusan yang siap kerja, berjiwa wirausaha, cerdas, kompetitif, dan memiliki jati diri bangsa, serta mampu mengembangkan keunggulan lokal dan dapat bersaing di pasar global.</p>
+        <div class="hero-actions">
+          <a href="#profil" class="btn btn-primary">Selengkapnya</a>
+          <a href="#kontak" class="btn btn-ghost">Hubungi Kami</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-slider" id="heroSlider" aria-label="Galeri Foto Sekolah" tabindex="0">
+          <div class="slider-track" id="sliderTrack">
+            <div class="slide active">
+              <img src="Assets/gerbang.jpeg" alt="Gerbang Utama SMKN 2 Klaten" class="slider-img" id="heroSlide0">
+              <div class="slide-caption">Gerbang Utama SMKN 2 Klaten</div>
+            </div>
+            <div class="slide">
+              <img src="Assets/bengkel.jpeg" alt="Bengkel dan Laboratorium SMKN 2 Klaten" class="slider-img" id="heroSlide1">
+              <div class="slide-caption">Bengkel & Lab Kejuruan</div>
+            </div>
+            <div class="slide">
+              <img src="Assets/gedung-sekolah-3.jpg" alt="Halaman dan Lapangan Upacara" class="slider-img" id="heroSlide2">
+              <div class="slide-caption">Halaman Depan</div>
+            </div>
+          </div>
+          <button class="slider-btn prev" id="sliderPrev" aria-label="Foto sebelumnya" type="button">&#10094;</button>
+          <button class="slider-btn next" id="sliderNext" aria-label="Foto berikutnya" type="button">&#10095;</button>
+          <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Navigasi slide foto">
+            <button class="dot active" data-index="0" role="tab" aria-label="Foto 1"></button>
+            <button class="dot" data-index="1" role="tab" aria-label="Foto 2"></button>
+            <button class="dot" data-index="2" role="tab" aria-label="Foto 3"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEJARAH -->
+  <section class="sejarah" id="sejarah">
+    <div class="sejarah-container">
+      <div class="sejarah-media">
+        <img src="Assets/sejarah.jpg" alt="Bangunan Bersejarah SMKN 2 Klaten" class="sejarah-img" id="sejarahImg">
+      </div>
+      <div class="sejarah-text">
+        <h2>Sejarah Singkat</h2>
+        <p>STM Klaten yang berstatus swasta yang dipelopori Hadi Sanyoto, Y. Rukido, dan Parjimin dirintis pendiriannya pada tanggal 1 Agustus 1961. STM yang berlokasi satu kompleks dengan SKPN Jl. Merapi No. 11 Klaten. STM Klaten semula hanya memiliki 2 jurusan yaitu Jurusan Mesin dan Jurusan Bangunan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BERITA -->
+  <section class="berita" id="berita">
+    <div class="berita-heading">
+      <div class="berita-heading-title">
+        <h2>Berita Sekolah</h2>
+        <p class="berita-subheading">Informasi terbaru seputar kegiatan dan pengumuman SMKN 2 Klaten</p>
+      </div>
+      <div class="berita-heading-actions">
+        <button id="btnAdminAccess" class="btn-admin-pill" type="button" title="Masuk Mode Admin">
+          <span class="admin-icon" id="adminLockIcon">🔐</span>
+          <span id="adminBtnText">Kelola Berita</span>
+        </button>
+        <button id="btnTambahBerita" class="btn btn-primary btn-sm btn-tambah" type="button" style="display: none;">
+          + Tambah Berita
+        </button>
+      </div>
+    </div>
+    <div class="berita-container" id="beritaContainer">
+      <!-- Diisi secara dinamis oleh JavaScript -->
+    </div>
+  </section>
+
+  <!-- PROFIL (dibuat agar link menu Profil punya tujuan) -->
+  <section class="profil" id="profil">
+    <div class="profil-container">
+      <h2>Profil Sekolah</h2>
+      <div class="profil-grid">
+        <div class="profil-item">
+          <h4>Visi</h4>
+          <p>Menjadi lembaga pendidikan kejuruan unggul yang menghasilkan lulusan siap kerja, wirausaha, dan berdaya saing global.</p>
+        </div>
+        <div class="profil-item">
+          <h4>Misi</h4>
+          <p>Menyelenggarakan pendidikan kejuruan bermutu, membangun karakter jati diri bangsa, serta mengembangkan keunggulan lokal sekolah.</p>
+        </div>
+        <div class="profil-item">
+          <h4>Alamat</h4>
+          <p>Senden, Ngawen, Klaten, Jawa Tengah.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / KONTAK -->
+  <footer class="site-footer" id="kontak">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Hubungi</h4>
+        <p>Telephone: (0272) 3354021</p>
+      </div>
+      <div class="footer-col">
+        <h4>Social Media</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/smkn2klaten/" target="_blank" rel="noopener noreferrer" aria-label="Instagram SMKN 2 Klaten" class="social-icon">
+            <img src="Assets/icon-instagram.svg" alt="Instagram" class="social-img">
+          </a>
+          <a href="https://www.youtube.com/@smkn2klaten47" target="_blank" rel="noopener noreferrer" aria-label="YouTube SMKN 2 Klaten" class="social-icon">
+            <img src="Assets/icon-youtube.svg" alt="YouTube" class="social-img">
+          </a>
+          <a href="https://www.tiktok.com/@smkn2klaten" target="_blank" rel="noopener noreferrer" aria-label="TikTok SMKN 2 Klaten" class="social-icon">
+            <img src="Assets/icon-tiktok.svg" alt="TikTok" class="social-img">
+          </a>
+          <a href="https://www.facebook.com/smkn2klaten/" target="_blank" rel="noopener noreferrer" aria-label="Facebook SMKN 2 Klaten" class="social-icon">
+            <img src="Assets/icon-facebook.svg" alt="Facebook" class="social-img">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-row">
+          <img src="Assets/logo.png" alt="Logo SMKN 2 Klaten" class="footer-logo" id="footerLogo">
+          <span>
+            <strong>SMKN 2 KLATEN</strong><br>
+            <small>Senden, Ngawen, Klaten</small>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> SMK Negeri 2 Klaten. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL LOGIN ADMIN BERITA -->
+  <div class="news-modal" id="modalAdminLogin" aria-hidden="true" role="dialog" aria-labelledby="loginModalTitle">
+    <div class="news-modal-backdrop" id="backdropAdminLogin"></div>
+    <div class="news-modal-dialog modal-dialog-sm">
+      <div class="news-modal-header">
+        <h3 id="loginModalTitle">🔐 Login Admin Berita</h3>
+        <button class="news-modal-close" id="btnCloseAdminLogin" aria-label="Tutup">&times;</button>
+      </div>
+      <form id="formAdminLogin" class="news-modal-body">
+        <p class="modal-instruction">Masukkan kata sandi admin untuk mengelola (tambah, edit, hapus) berita sekolah:</p>
+        <div class="form-group">
+          <label for="adminPasswordInput">Kata Sandi Admin:</label>
+          <input type="password" id="adminPasswordInput" class="text-input" placeholder="Masukkan sandi..." required autocomplete="current-password">
+          <small class="form-hint">Kata sandi bawaan: <code>admin123</code></small>
+        </div>
+        <div id="loginErrorMsg" class="form-error-msg" style="display: none;">Kata sandi salah! Silakan coba lagi.</div>
+        <div class="news-modal-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="btnCancelAdminLogin">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm">Masuk</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL FORM BERITA (TAMBAH / EDIT DENGAN LIVE PREVIEW) -->
+  <div class="news-modal" id="modalBeritaForm" aria-hidden="true" role="dialog" aria-labelledby="formModalTitle">
+    <div class="news-modal-backdrop" id="backdropBeritaForm"></div>
+    <div class="news-modal-dialog">
+      <div class="news-modal-header">
+        <div>
+          <h3 id="formModalTitle">Tambah Berita Baru</h3>
+          <p class="modal-subtitle">Kelola informasi dan berita sekolah</p>
+        </div>
+        <button class="news-modal-close" id="btnCloseBeritaForm" aria-label="Tutup">&times;</button>
+      </div>
+      <form id="formBerita" class="news-modal-body">
+        <input type="hidden" id="beritaId">
+
+        <div class="form-group">
+          <label for="beritaJudul">Judul Berita: <span class="text-danger">*</span></label>
+          <input type="text" id="beritaJudul" class="text-input" placeholder="Contoh: Pembagian Rapor Semester Genap..." required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-half">
+            <label for="beritaKategori">Kategori / Badge:</label>
+            <input type="text" id="beritaKategori" class="text-input" placeholder="Contoh: Pengumuman, Prestasi, SPMB...">
+          </div>
+          <div class="form-group col-half">
+            <label for="beritaTanggal">Tanggal Berita:</label>
+            <input type="date" id="beritaTanggal" class="text-input">
+          </div>
+        </div>
+
+        <!-- UPLOAD GAMBAR & LIVE PREVIEW -->
+        <div class="form-group news-img-section">
+          <label><strong>Gambar Berita:</strong></label>
+          
+          <!-- LIVE PREVIEW AREA -->
+          <div class="live-img-preview-container">
+            <div class="live-img-preview-box" id="previewContainer">
+              <img id="liveImagePreview" src="" alt="Pratinjau Gambar Berita" style="display: none;">
+              <div id="previewPlaceholder" class="preview-empty-state">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Pratinjau gambar akan tampil di sini</span>
+              </div>
+            </div>
+            <button type="button" id="btnRemoveImage" class="btn-remove-img" style="display: none;" title="Hapus gambar">✕ Hapus Gambar</button>
+          </div>
+
+          <div class="img-upload-choices">
+            <div class="choice-col">
+              <label for="beritaGambarFile" class="sub-label">1. Pilih File dari Komputer (Rekomendasi):</label>
+              <input type="file" id="beritaGambarFile" accept="image/*" class="file-input">
+            </div>
+            <div class="choice-col">
+              <label for="beritaGambarUrl" class="sub-label">2. Atau Tempelkan URL Gambar:</label>
+              <input type="url" id="beritaGambarUrl" class="text-input" placeholder="https://contoh.com/foto.jpg">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="beritaKonten">Isi Konten Berita: <span class="text-danger">*</span></label>
+          <textarea id="beritaKonten" class="textarea-input" rows="5" placeholder="Tulis isi berita lengkap di sini..." required></textarea>
+        </div>
+
+        <div class="news-modal-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="btnCancelBeritaForm">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm" id="btnSubmitBerita">Simpan Berita</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL DETAIL / PREVIEW BACA BERITA -->
+  <div class="news-modal" id="modalBeritaDetail" aria-hidden="true" role="dialog" aria-labelledby="detailModalTitle">
+    <div class="news-modal-backdrop" id="backdropBeritaDetail"></div>
+    <div class="news-modal-dialog news-detail-dialog">
+      <div class="news-modal-header">
+        <span class="detail-header-tag" id="detailBadge">Berita</span>
+        <button class="news-modal-close" id="btnCloseBeritaDetail" aria-label="Tutup">&times;</button>
+      </div>
+      <div class="news-modal-body detail-body">
+        <div class="detail-img-wrapper" id="detailImgWrap">
+          <img id="detailImage" src="" alt="Gambar Berita">
+        </div>
+        <div class="detail-meta">
+          <span class="detail-date" id="detailDate">16 September 2026</span>
+        </div>
+        <h2 class="detail-title" id="detailModalTitle">Judul Berita</h2>
+        <div class="detail-content" id="detailContent">
+          <!-- Isi berita -->
+        </div>
+      </div>
+      <div class="news-modal-footer">
+        <button type="button" class="btn btn-ghost btn-sm" id="btnCloseDetailFooter">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
